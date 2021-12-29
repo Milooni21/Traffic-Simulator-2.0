@@ -1,3 +1,5 @@
+package Test;
+
 import Model.Road;
 import org.junit.jupiter.api.Test;
 
@@ -23,3 +25,4 @@ class BusTest {
         assertEquals(-12, bus.getPosition());
     }
 }
+
