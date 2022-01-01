@@ -9,16 +9,16 @@ public class Road {
         HORIZONTAL, VERTICAL
     }
 
-    private Orientation orientation;
-    private String id;
-    private int speedLimit;
-    private int length;
-    private int width;
-    private int[] startLocation;
+    private final Orientation orientation;
+    private final String id;
+    private final int speedLimit;
+    private final int length;
+    private final int width;
+    private final int[] startLocation;
     private int[] endLocation;
-    private ArrayList<Vehicle> vehiclesOnRoad = new ArrayList<>();
-    private ArrayList<TrafficLight> lightsOnRoad = new ArrayList<>();
-    private ArrayList<Road> connectedRoads = new ArrayList<>();
+    private final ArrayList<Vehicle> vehiclesOnRoad = new ArrayList<>();
+    private final ArrayList<TrafficLight> lightsOnRoad = new ArrayList<>();
+    private final ArrayList<Road> connectedRoads = new ArrayList<>();
 
 
     public Road(String id, int speedLimit, int length, int[] startLocation, Orientation orientation) {
@@ -109,3 +109,7 @@ public class Road {
     }
 
 }
+
+
+
+

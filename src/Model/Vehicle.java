@@ -7,14 +7,14 @@ public abstract class Vehicle {
 
     private static final int STOPPED = 0;
     private static final int START_POSITION = 0;
-    int length; // number of segments occupied
+    int length;
     int breadth;
-    String id; // unique identifier
-    private int speed; //segments moved per turn
-    private Road currentRoad; // current Model.Road object
-    int position; // position on current road
+    String id;
+    private int speed;
+    private Road currentRoad;
+    int position;
     private Color colour;
-    private Random random = new Random();
+    private final Random random = new Random();
 
 
     public Vehicle(Road currentRoad) {
@@ -23,7 +23,7 @@ public abstract class Vehicle {
         breadth = 2;
         speed = 0;
         this.currentRoad = currentRoad;
-        currentRoad.getVehiclesOnRoad().add(this); //add this vehicle to the road its on.
+        currentRoad.getVehiclesOnRoad().add(this);
         colour = randomColour();
     }
 
@@ -48,7 +48,7 @@ public abstract class Vehicle {
             }
         }
         //red light check:
-        if (speed == STOPPED) { //intentionally left empty
+        if (speed == STOPPED) {
         } else {
             if (!currentRoad.getLightsOnRoad().isEmpty() && nextPosition + 1 >= currentRoad.getLightsOnRoad().get(0).getPosition() && this.currentRoad.getLightsOnRoad().get(0).getState().equals("red")) {
                 speed = STOPPED;
@@ -134,4 +134,7 @@ public abstract class Vehicle {
 
 
 }
+
+
+
 

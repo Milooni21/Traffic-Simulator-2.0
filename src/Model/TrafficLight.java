@@ -4,7 +4,7 @@ import java.awt.*;
 import java.util.Random;
 
 public class TrafficLight {
-    private static final double CHANGE = 0.4; // more often red
+    private static final double CHANGE = 0.4;
     private static final String GREEN = "green";
     private static final String RED = "red";
     private String id;
@@ -16,8 +16,8 @@ public class TrafficLight {
         this.id = "light_" + id;
         state = RED;
         this.roadAttachedTo = road;
-        position = this.roadAttachedTo.getLength(); // always places the traffic light at the end of the roadAttachedTo.
-        this.roadAttachedTo.getLightsOnRoad().add(this); // adds this light to the road it belongs to.
+        position = this.roadAttachedTo.getLength();
+        this.roadAttachedTo.getLightsOnRoad().add(this);
     }
 
     public void operate(int seed) {
@@ -86,3 +86,6 @@ public class TrafficLight {
         }
     }
 }
+
+
+
