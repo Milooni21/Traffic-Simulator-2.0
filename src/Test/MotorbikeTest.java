@@ -1,3 +1,5 @@
+package Test;
+
 import Model.Road;
 import org.junit.jupiter.api.Test;
 
@@ -22,3 +24,5 @@ class MotorbikeTest {
         assertEquals(-2, bike.getPosition());
     }
 }
+
+
