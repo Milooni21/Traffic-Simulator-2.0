@@ -1,4 +1,4 @@
-package test;
+package Test;
 
 import Model.Road;
 import Model.TrafficLight;
@@ -36,3 +36,5 @@ class TrafficLightTest {
         assertEquals("light_0", light.getId());
     }
 }
+
+
